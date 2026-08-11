@@ -91,7 +91,7 @@ export default function Hero() {
   return (
     <div className="relative bg-gradient-to-br from-orange-500 to-red-600 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="text-white">
             {heroImages.length > 0 ? (
               <>
@@ -122,7 +122,7 @@ export default function Hero() {
             )}
           </div>
 
-          <div className="hidden lg:block">
+          <div className="block">
             <div className="relative">
               <div className="absolute inset-0 bg-white/20 rounded-3xl transform rotate-6"></div>
               <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-4">
@@ -130,7 +130,7 @@ export default function Hero() {
                   <img
                     src={heroImages[currentSlide].public_url}
                     alt={heroImages[currentSlide].file_name}
-                    className="w-full h-96 object-cover rounded-2xl"
+                    className="w-full h-64 sm:h-80 lg:h-[500px] object-cover rounded-2xl"
                   />
                 ) : (
                   <div className="text-9xl text-center">🍽️</div>
