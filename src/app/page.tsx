@@ -6,6 +6,16 @@ import OpeningHours from '@/components/OpeningHours'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { Lock } from 'lucide-react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Welcome to Tutu's Cafe and Kitchen | North Indian Restaurant in Somwarpet, Kodagu",
+  description: "Welcome to Tutu's Cafe and Kitchen in Somwarpet, Kodagu, Karnataka. Family-run kitchen with decades of experience serving authentic North Indian home-style cooking made fresh to order.",
+  openGraph: {
+    title: "Welcome to Tutu's Cafe and Kitchen | North Indian Restaurant in Somwarpet, Kodagu",
+    description: "Family-run kitchen with decades of experience serving authentic North Indian home-style cooking made fresh to order.",
+  },
+}
 
 export default function Home() {
   return (

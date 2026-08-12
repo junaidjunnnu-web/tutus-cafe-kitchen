@@ -3,12 +3,7 @@ import { RESTAURANT_INFO } from '../lib/data'
 export const restaurantSchema = {
   "@context": "https://schema.org",
   "@type": "Restaurant",
-  "name": RESTAURANT_INFO.name,
-  "image": [
-    "https://tutuscafe.com/images/hero-1.jpg",
-    "https://tutuscafe.com/images/hero-2.jpg",
-    "https://tutuscafe.com/images/interior-1.jpg"
-  ],
+  "name": "Tutu's Cafe and Kitchen",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Madikeri Road",
@@ -19,19 +14,25 @@ export const restaurantSchema = {
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 12.123456789,
-    "longitude": 75.123456789
+    "latitude": 12.599097,
+    "longitude": 75.845271
   },
-  "url": "https://tutuscafe.com",
-  "telephone": `+${RESTAURANT_INFO.phone}`,
-  "email": RESTAURANT_INFO.email,
-  "servesCuisine": "North Indian",
-  "priceRange": RESTAURANT_INFO.price_range,
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": RESTAURANT_INFO.rating.toString(),
-    "reviewCount": RESTAURANT_INFO.review_count.toString()
-  },
+  "url": "https://tutus-cafe-kitchen.vercel.app",
+  "telephone": "+919379978866",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+919019912901",
+      "contactType": "customer service"
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+919448712901",
+      "contactType": "customer service"
+    }
+  ],
+  "servesCuisine": ["Indian", "North Indian"],
+  "priceRange": "₹200-400",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -48,5 +49,7 @@ export const restaurantSchema = {
       "closes": "23:00"
     }
   ],
-  "menu": "https://tutuscafe.com/menu"
+  "sameAs": [
+    "https://maps.app.goo.gl/Mu3f1SSBRAh54YQf6"
+  ]
 }
