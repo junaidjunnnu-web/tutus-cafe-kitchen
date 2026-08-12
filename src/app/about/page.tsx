@@ -19,11 +19,11 @@ export default function AboutPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Restaurant Story */}
-          <div className="rounded-xl shadow-sm border border-gray-100 p-8 mb-12" style={{ backgroundColor: '#F5E6D3' }}>
+          <div className="rounded-xl shadow-sm border border-gray-100 p-8 mb-12" style={{ backgroundColor: '#9B9992' }}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">From Passion to Plate</h2>
-                <div className="space-y-4 text-gray-600">
+                <h2 className="text-3xl font-bold text-white mb-6">From Passion to Plate</h2>
+                <div className="space-y-4 text-white">
                   <p>
                     Tutu's Cafe and Kitchen was born from a deep love for authentic North Indian cuisine 
                     and a desire to bring the rich culinary traditions of our heritage to the beautiful 
