@@ -63,15 +63,15 @@ export default function MenuPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Text Menu */}
-          <div className="rounded-xl shadow-sm border border-[#E4E4E7] p-8 mb-12" style={{ backgroundColor: '#8B898A' }}>
+          <div className="rounded-xl shadow-sm border border-[#E4E4E7] p-8 mb-12" style={{ backgroundColor: '#141414' }}>
             <h2 className="text-2xl font-bold text-white mb-6">Full Menu</h2>
             <div className="space-y-6">
               {Object.entries(menuData).map(([category, items]) => (
                 <div key={category}>
-                  <h3 className="text-lg font-semibold text-[#F4F4F5] mb-3">{category}</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">{category}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                     {items.map((item) => (
-                      <div key={item} className="text-sm text-white">
+                      <div key={item} className="text-sm" style={{ color: '#EAD9A0' }}>
                         {item}
                       </div>
                     ))}
