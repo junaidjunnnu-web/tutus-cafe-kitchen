@@ -34,9 +34,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
-                      <p className="text-gray-600">{RESTAURANT_INFO.address}</p>
+                      <p className="text-gray-600">Madikeri Road, Somwarpet, Karnataka 571236</p>
                       <a
-                        href={getDirectionsLink(RESTAURANT_INFO.address)}
+                        href="https://maps.app.goo.gl/Mu3f1SSBRAh54YQf6"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center space-x-2 mt-2 text-[#18181B] hover:text-[#52525B] transition-colors"
@@ -151,25 +151,25 @@ export default function ContactPage() {
               </div>
               <div className="aspect-w-16 aspect-h-12 bg-gray-200 min-h-[400px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.123456789!2d75.123456789!3d12.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA3JzI0LjQiTiA3NcKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.7442911249527!2d75.84527157483468!3d12.599097087683104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5051ca2e138e9%3A0x3bd31686b5436f80!2sTutu's%20Cafe%20and%20Kitchen!5e0!3m2!1sen!2sin!4v1786553238270!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0, minHeight: '400px' }}
                   allowFullScreen
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   title="Tutu's Cafe and Kitchen Location"
                 />
               </div>
               <div className="p-4">
                 <a
-                  href={getDirectionsLink(RESTAURANT_INFO.address)}
+                  href="https://maps.app.goo.gl/Mu3f1SSBRAh54YQf6"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="w-full inline-flex items-center justify-center space-x-2 bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors"
                 >
                   <NavigationIcon className="w-5 h-5" />
-                  <span>Open in Google Maps</span>
+                  <span>Get Directions</span>
                 </a>
               </div>
             </div>

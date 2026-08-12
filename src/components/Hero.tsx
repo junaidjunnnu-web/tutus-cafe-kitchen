@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, MapPin } from 'lucide-react'
 
 export default function Hero() {
   const [heroImages, setHeroImages] = useState<any[]>([])
@@ -55,6 +55,10 @@ export default function Hero() {
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
         Welcome to Tutu's Cafe and Kitchen
       </h1>
+      <div className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
+        <MapPin className="w-4 h-4" />
+        <span>Somwarpet, Kodagu, Karnataka</span>
+      </div>
       <p className="text-xl md:text-2xl text-gray-200 mb-8">
         Experience the rich flavors of India in the heart of Coorg
       </p>
@@ -98,6 +102,10 @@ export default function Hero() {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
                   Welcome to Tutu's Cafe and Kitchen
                 </h1>
+                <div className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
+                  <MapPin className="w-4 h-4" />
+                  <span>Somwarpet, Kodagu, Karnataka</span>
+                </div>
                 <p className="text-xl md:text-2xl text-gray-200 mb-8">
                   Experience the rich flavors of India in the heart of Coorg
                 </p>
