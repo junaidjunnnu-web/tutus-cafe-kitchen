@@ -19,22 +19,18 @@ export default function Home() {
       <section className="py-16" style={{ backgroundColor: '#18181B' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 rounded-xl shadow-sm border border-gray-700 p-6" style={{ backgroundColor: '#1F2937' }}>
-              <h2 className="text-3xl font-bold text-white mb-4">
+            <div className="lg:col-span-2 rounded-xl shadow-sm border border-gray-700 p-6" style={{ backgroundColor: '#141414' }}>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: '#D4D4D8' }}>
                 Welcome to Tutu's Cafe and Kitchen
               </h2>
-              <p className="text-gray-200 mb-6">
-                Experience the authentic flavors of North Indian cuisine in the heart of Somwarpet, Coorg.
-                Our family-owned restaurant brings you traditional recipes passed down through generations,
-                prepared with fresh local ingredients and served with warm hospitality.
+              <p className="mb-6" style={{ color: '#E7E5E4' }}>
+                Tutu's Cafe and Kitchen has been serving Somwarpet, in Kodagu district, Karnataka, for years as a family-run kitchen led by an experienced owner with decades in the restaurant business. Guests visiting Coorg and locals alike come here for genuinely North Indian home-style cooking, made fresh to order rather than pre-prepared.
               </p>
-              <p className="text-gray-200 mb-6">
-                From our signature butter chicken and tandoori specialties to aromatic biryanis and fresh-baked naan,
-                every dish is crafted with love and expertise. Whether you're dining in with family, grabbing a quick
-                takeaway, or ordering no-contact delivery, we promise a memorable culinary experience.
+              <p className="mb-6" style={{ color: '#E7E5E4' }}>
+                Our tandoori specialties, BBQ platters, and biryanis are among the most loved on the menu, alongside comforting classics like butter chicken, kebabs, and freshly baked naan. Each dish is cooked after you order, so flavors stay fresh — and spice levels are always made to your preference, from mild to extra hot.
               </p>
-              <p className="text-gray-200">
-                From cozy family dinners to celebrations with friends, Tutu's is the place Somwarpet comes to for a taste of home-style North Indian cooking. Dine in and relax in our comfortable seating, or order ahead for a quick takeaway — whatever you choose, every plate is prepared fresh with care.
+              <p style={{ color: '#E7E5E4' }}>
+                Whether you're stopping by for a quiet family dinner, a celebration with friends, or a quick takeaway on your way through Somwarpet, we aim to make every visit feel warm and welcoming — the same hospitality that's kept guests coming back for years.
               </p>
             </div>
             <div>
