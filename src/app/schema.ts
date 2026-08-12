@@ -17,7 +17,7 @@ export const restaurantSchema = {
     "latitude": 12.599097,
     "longitude": 75.845271
   },
-  "url": "https://tutus-cafe-kitchen.vercel.app",
+  "url": "https://tutuscafeandkitchen.com",
   "telephone": "+919379978866",
   "contactPoint": [
     {

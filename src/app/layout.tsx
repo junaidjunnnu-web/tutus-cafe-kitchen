@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: "Family-run North Indian restaurant in Somwarpet, Kodagu, Karnataka. Known for tandoori, biryani, and butter chicken. Dine-in, takeaway, and delivery.",
   },
   alternates: {
-    canonical: "https://tutus-cafe-kitchen.vercel.app",
+    canonical: "https://tutuscafeandkitchen.com",
   },
 };
 
