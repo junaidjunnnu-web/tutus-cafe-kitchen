@@ -234,8 +234,8 @@ export default function AdminPage() {
           <div className="max-w-md w-full">
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
               <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                  <Lock className="w-8 h-8 text-orange-600" />
+                <div className="w-16 h-16 bg-[#F4F4F5] rounded-full flex items-center justify-center">
+                  <Lock className="w-8 h-8 text-[#18181B]" />
                 </div>
               </div>
               <h1 className="text-2xl font-bold text-gray-900 text-center mb-2">Admin Panel</h1>
@@ -248,7 +248,7 @@ export default function AdminPage() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Enter admin password"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
                   />
                 </div>
                 {error && (
@@ -256,7 +256,7 @@ export default function AdminPage() {
                 )}
                 <button
                   type="submit"
-                  className="w-full bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors"
+                  className="w-full bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors"
                 >
                   Access Panel
                 </button>
@@ -296,7 +296,7 @@ export default function AdminPage() {
             onClick={() => setActiveTab('images')}
             className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
               activeTab === 'images'
-                ? 'bg-orange-600 text-white'
+                ? 'bg-[#18181B] text-white'
                 : 'bg-white text-gray-700 hover:bg-gray-100'
             }`}
           >
@@ -307,7 +307,7 @@ export default function AdminPage() {
             onClick={() => setActiveTab('reviews')}
             className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
               activeTab === 'reviews'
-                ? 'bg-orange-600 text-white'
+                ? 'bg-[#18181B] text-white'
                 : 'bg-white text-gray-700 hover:bg-gray-100'
             }`}
           >
@@ -318,7 +318,7 @@ export default function AdminPage() {
             onClick={() => setActiveTab('reservations')}
             className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
               activeTab === 'reservations'
-                ? 'bg-orange-600 text-white'
+                ? 'bg-[#18181B] text-white'
                 : 'bg-white text-gray-700 hover:bg-gray-100'
             }`}
           >
@@ -365,7 +365,7 @@ export default function AdminPage() {
                 <select
                   value={imageCategory}
                   onChange={(e) => setImageCategory(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
                 >
                   <option value="hero">Hero Banner</option>
                   <option value="menu">Menu Item</option>
@@ -380,7 +380,7 @@ export default function AdminPage() {
               <button
                 type="submit"
                 disabled={!imageFile || uploading}
-                className="w-full bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+                className="w-full bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
               >
                 {uploading ? 'Uploading...' : 'Upload Image'}
               </button>
@@ -392,7 +392,7 @@ export default function AdminPage() {
               
               {loadingImages ? (
                 <div className="text-center py-8">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600 mx-auto"></div>
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#18181B] mx-auto"></div>
                   <p className="text-gray-600 mt-2">Loading images...</p>
                 </div>
               ) : uploadedImages.length === 0 ? (
@@ -435,7 +435,7 @@ export default function AdminPage() {
             
             {loadingReviews ? (
               <div className="text-center py-8">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600 mx-auto"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#18181B] mx-auto"></div>
                 <p className="text-gray-600 mt-2">Loading reviews...</p>
               </div>
             ) : allReviews.length === 0 ? (
@@ -497,7 +497,7 @@ export default function AdminPage() {
             
             {loadingReservations ? (
               <div className="text-center py-8">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600 mx-auto"></div>
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#18181B] mx-auto"></div>
                 <p className="text-gray-600 mt-2">Loading reservations...</p>
               </div>
             ) : reservations.length === 0 ? (

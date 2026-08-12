@@ -16,19 +16,19 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-orange-600">Tutu's</span>
+            <span className="text-2xl font-bold text-[#18181B]">Tutu's</span>
             <span className="text-2xl font-light text-gray-800">Cafe and Kitchen</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-orange-600 transition-colors">Home</Link>
-            <Link href="/menu" className="text-gray-700 hover:text-orange-600 transition-colors">Menu</Link>
-            <Link href="/about" className="text-gray-700 hover:text-orange-600 transition-colors">About</Link>
-            <Link href="/gallery" className="text-gray-700 hover:text-orange-600 transition-colors">Gallery</Link>
-            <Link href="/reviews" className="text-gray-700 hover:text-orange-600 transition-colors">Reviews</Link>
-            <Link href="/contact" className="text-gray-700 hover:text-orange-600 transition-colors">Contact</Link>
-            <Link href="/reservations" className="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors">
+            <Link href="/" className="text-gray-700 hover:text-[#52525B] transition-colors">Home</Link>
+            <Link href="/menu" className="text-gray-700 hover:text-[#52525B] transition-colors">Menu</Link>
+            <Link href="/about" className="text-gray-700 hover:text-[#52525B] transition-colors">About</Link>
+            <Link href="/gallery" className="text-gray-700 hover:text-[#52525B] transition-colors">Gallery</Link>
+            <Link href="/reviews" className="text-gray-700 hover:text-[#52525B] transition-colors">Reviews</Link>
+            <Link href="/contact" className="text-gray-700 hover:text-[#52525B] transition-colors">Contact</Link>
+            <Link href="/reservations" className="bg-[#18181B] text-white px-4 py-2 rounded-lg hover:bg-[#52525B] transition-colors">
               Reserve
             </Link>
           </div>
@@ -45,13 +45,13 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-3">
-            <Link href="/" className="block text-gray-700 hover:text-orange-600 transition-colors py-2">Home</Link>
-            <Link href="/menu" className="block text-gray-700 hover:text-orange-600 transition-colors py-2">Menu</Link>
-            <Link href="/about" className="block text-gray-700 hover:text-orange-600 transition-colors py-2">About</Link>
-            <Link href="/gallery" className="block text-gray-700 hover:text-orange-600 transition-colors py-2">Gallery</Link>
-            <Link href="/reviews" className="block text-gray-700 hover:text-orange-600 transition-colors py-2">Reviews</Link>
-            <Link href="/contact" className="block text-gray-700 hover:text-orange-600 transition-colors py-2">Contact</Link>
-            <Link href="/reservations" className="block bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors text-center">
+            <Link href="/" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">Home</Link>
+            <Link href="/menu" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">Menu</Link>
+            <Link href="/about" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">About</Link>
+            <Link href="/gallery" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">Gallery</Link>
+            <Link href="/reviews" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">Reviews</Link>
+            <Link href="/contact" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">Contact</Link>
+            <Link href="/reservations" className="block bg-[#18181B] text-white px-4 py-2 rounded-lg hover:bg-[#52525B] transition-colors text-center">
               Reserve
             </Link>
           </div>

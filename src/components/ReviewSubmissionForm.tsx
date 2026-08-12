@@ -136,7 +136,7 @@ export default function ReviewSubmissionForm() {
   }
 
   return (
-    <div className="rounded-xl shadow-sm border border-gray-100 p-8" style={{ backgroundColor: '#E8F0E3' }}>
+    <div className="rounded-xl shadow-sm border border-gray-100 p-8" style={{ backgroundColor: '#F4F4F5' }}>
       <h3 className="text-2xl font-bold text-gray-900 mb-6">Write a Review</h3>
       
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -149,7 +149,7 @@ export default function ReviewSubmissionForm() {
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             required
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
             placeholder="Enter your name"
           />
         </div>
@@ -187,7 +187,7 @@ export default function ReviewSubmissionForm() {
             onChange={(e) => setFormData({ ...formData, text: e.target.value })}
             required
             rows={4}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
             placeholder="Share your experience with us..."
             minLength={10}
           />
@@ -232,7 +232,7 @@ export default function ReviewSubmissionForm() {
                 >
                   {isUploading ? (
                     <div className="flex flex-col items-center">
-                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-600"></div>
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#18181B]"></div>
                       <p className="text-gray-600 mt-2">Uploading...</p>
                     </div>
                   ) : (
@@ -267,7 +267,7 @@ export default function ReviewSubmissionForm() {
         <button
           type="submit"
           disabled={isSubmitting || !captchaValid}
-          className="w-full bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+          className="w-full bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
         >
           {isSubmitting ? 'Submitting...' : 'Submit Review'}
         </button>

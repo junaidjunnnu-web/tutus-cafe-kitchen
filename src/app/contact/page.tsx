@@ -10,10 +10,10 @@ export default function ContactPage() {
       <Navigation />
       <main className="flex-1 bg-gray-50">
         {/* Header */}
-        <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16">
+        <div className="bg-gradient-to-r from-[#18181B] to-[#52525B] text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-            <p className="text-xl text-orange-100">
+            <p className="text-xl text-gray-200">
               Get in touch or visit us at our location
             </p>
           </div>
@@ -23,14 +23,14 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Contact Information */}
             <div className="space-y-6">
-              <div className="rounded-xl shadow-sm border border-gray-100 p-6" style={{ backgroundColor: '#E8F0E3' }}>
+              <div className="rounded-xl shadow-sm border border-gray-100 p-6" style={{ backgroundColor: '#F4F4F5' }}>
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                 
                 <div className="space-y-6">
                   {/* Address */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-orange-600" />
+                    <div className="w-12 h-12 bg-[#F4F4F5] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-[#18181B]" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
@@ -39,7 +39,7 @@ export default function ContactPage() {
                         href={getDirectionsLink(RESTAURANT_INFO.address)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center space-x-2 mt-2 text-orange-600 hover:text-orange-700 transition-colors"
+                        className="inline-flex items-center space-x-2 mt-2 text-[#18181B] hover:text-[#52525B] transition-colors"
                       >
                         <NavigationIcon className="w-4 h-4" />
                         <span className="text-sm">Get Directions</span>
@@ -49,15 +49,15 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-orange-600" />
+                    <div className="w-12 h-12 bg-[#F4F4F5] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-[#18181B]" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                       <div className="space-y-1">
                         <a
                           href={`tel:+${RESTAURANT_INFO.phone}`}
-                          className="text-gray-600 hover:text-orange-600 transition-colors block"
+                          className="text-gray-600 hover:text-[#52525B] transition-colors block"
                         >
                           {RESTAURANT_INFO.phone}
                         </a>
@@ -65,7 +65,7 @@ export default function ContactPage() {
                           <a
                             key={phone}
                             href={`tel:+${phone}`}
-                            className="text-gray-600 hover:text-orange-600 transition-colors block"
+                            className="text-gray-600 hover:text-[#52525B] transition-colors block"
                           >
                             {phone}
                           </a>
@@ -74,7 +74,7 @@ export default function ContactPage() {
                       <div className="flex space-x-2 mt-2">
                         <a
                           href={`tel:+${RESTAURANT_INFO.phone}`}
-                          className="inline-flex items-center space-x-2 bg-orange-600 text-white px-3 py-1 rounded-lg hover:bg-orange-700 transition-colors text-sm"
+                          className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-3 py-1 rounded-lg hover:bg-[#52525B] transition-colors text-sm"
                         >
                           <Phone className="w-4 h-4" />
                           <span>Call Now</span>
@@ -94,14 +94,14 @@ export default function ContactPage() {
 
                   {/* Email */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-orange-600" />
+                    <div className="w-12 h-12 bg-[#F4F4F5] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-[#18181B]" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                       <a
                         href={`mailto:${RESTAURANT_INFO.email}`}
-                        className="text-gray-600 hover:text-orange-600 transition-colors"
+                        className="text-gray-600 hover:text-[#52525B] transition-colors"
                       >
                         {RESTAURANT_INFO.email}
                       </a>
@@ -110,8 +110,8 @@ export default function ContactPage() {
 
                   {/* Hours */}
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-orange-600" />
+                    <div className="w-12 h-12 bg-[#F4F4F5] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-[#18181B]" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Opening Hours</h3>
@@ -135,7 +135,7 @@ export default function ContactPage() {
                   {RESTAURANT_INFO.service_options.map((option) => (
                     <span
                       key={option}
-                      className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm"
+                      className="bg-[#F4F4F5] text-[#18181B] px-3 py-1 rounded-full text-sm"
                     >
                       {option}
                     </span>

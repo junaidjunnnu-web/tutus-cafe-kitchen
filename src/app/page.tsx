@@ -16,7 +16,7 @@ export default function Home() {
       <USPStrip />
       
       {/* Info Section */}
-      <section className="py-16" style={{ backgroundColor: '#1F2937' }}>
+      <section className="py-16" style={{ backgroundColor: '#18181B' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2 rounded-xl shadow-sm border border-gray-700 p-6" style={{ backgroundColor: '#1F2937' }}>

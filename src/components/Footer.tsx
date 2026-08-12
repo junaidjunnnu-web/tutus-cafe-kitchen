@@ -4,7 +4,7 @@ import { RESTAURANT_INFO } from '@/lib/data'
 
 export default function Footer() {
   return (
-    <footer className="text-white" style={{ backgroundColor: '#1F2937' }}>
+    <footer className="text-white" style={{ backgroundColor: '#18181B' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -56,25 +56,25 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-orange-500 mt-1" />
+                <MapPin className="w-5 h-5 text-[#52525B] mt-1" />
                 <span className="text-gray-400">Madikeri Road, Somwarpet, Karnataka 571236</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-orange-500" />
+                <Phone className="w-5 h-5 text-[#52525B]" />
                 <a href={`tel:+${RESTAURANT_INFO.phone}`} className="text-gray-400 hover:text-white transition-colors">
                   {RESTAURANT_INFO.phone}
                 </a>
               </li>
               {RESTAURANT_INFO.additional_phones?.map((phone) => (
                 <li key={phone} className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-orange-500" />
+                  <Phone className="w-5 h-5 text-[#52525B]" />
                   <a href={`tel:+${phone}`} className="text-gray-400 hover:text-white transition-colors">
                     {phone}
                   </a>
                 </li>
               ))}
               <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-orange-500" />
+                <Mail className="w-5 h-5 text-[#52525B]" />
                 <a href={`mailto:${RESTAURANT_INFO.email}`} className="text-gray-400 hover:text-white transition-colors">
                   {RESTAURANT_INFO.email}
                 </a>
@@ -87,7 +87,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Hours</h4>
             <ul className="space-y-2">
               <li className="flex items-center space-x-3">
-                <Clock className="w-5 h-5 text-orange-500" />
+                <Clock className="w-5 h-5 text-[#52525B]" />
                 <span className="text-gray-400">11:00 AM - 11:00 PM</span>
               </li>
               <li className="text-gray-400">Open all days</li>

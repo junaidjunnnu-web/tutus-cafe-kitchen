@@ -36,7 +36,7 @@ export default function FeaturedDishes() {
 
         {loading ? (
           <div className="text-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600 mx-auto"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#18181B] mx-auto"></div>
             <p className="text-gray-600 mt-4">Loading dishes...</p>
           </div>
         ) : menuImages.length === 0 ? (
@@ -49,7 +49,7 @@ export default function FeaturedDishes() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {menuImages.map((image) => (
                 <div key={image.id} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="aspect-square bg-gradient-to-br from-orange-50 to-red-50">
+                  <div className="aspect-square bg-gradient-to-br from-[#F4F4F5] to-[#52525B]">
                     <img
                       src={image.public_url}
                       alt="Featured dish"
@@ -63,7 +63,7 @@ export default function FeaturedDishes() {
             <div className="text-center mt-8">
               <a
                 href="/menu"
-                className="inline-flex items-center space-x-2 bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors"
+                className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors"
               >
                 <span>View Full Menu</span>
                 <ArrowRight className="w-5 h-5" />

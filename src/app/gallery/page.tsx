@@ -56,10 +56,10 @@ export default function GalleryPage() {
       <Navigation />
       <main className="flex-1 bg-gray-50">
         {/* Header */}
-        <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16">
+        <div className="bg-gradient-to-r from-[#18181B] to-[#52525B] text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Gallery</h1>
-            <p className="text-xl text-orange-100">
+            <p className="text-xl text-gray-200">
               A visual journey through our food, ambience, and celebrations
             </p>
           </div>
@@ -81,7 +81,7 @@ export default function GalleryPage() {
                   className={cn(
                     "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
                     selectedCategory === category.value
-                      ? "bg-orange-600 text-white"
+                      ? "bg-[#18181B] text-white"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   )}
                 >
@@ -94,7 +94,7 @@ export default function GalleryPage() {
           {/* Gallery Grid */}
           {loading ? (
             <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600 mx-auto"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#18181B] mx-auto"></div>
               <p className="text-gray-600 mt-4">Loading gallery...</p>
             </div>
           ) : (
@@ -104,7 +104,7 @@ export default function GalleryPage() {
                   <div
                     key={image.id}
                     onClick={() => setSelectedImage(image)}
-                    className="relative aspect-square bg-gradient-to-br from-orange-100 to-red-100 rounded-xl overflow-hidden cursor-pointer hover:shadow-lg transition-shadow group"
+                    className="relative aspect-square bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-xl overflow-hidden cursor-pointer hover:shadow-lg transition-shadow group"
                   >
                     <img
                       src={image.public_url}

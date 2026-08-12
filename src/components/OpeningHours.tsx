@@ -14,7 +14,7 @@ export default function OpeningHours() {
   const isCurrentlyOpen = currentHour >= openHour && currentHour < closeHour
 
   return (
-    <div className='rounded-xl shadow-sm border border-gray-700 p-6' style={{ backgroundColor: '#1F2937' }}>
+    <div className='rounded-xl shadow-sm border border-gray-700 p-6' style={{ backgroundColor: '#18181B' }}>
       <div className='flex items-center justify-between mb-4'>
         <h3 className='text-lg font-semibold text-white'>Opening Hours</h3>
         <div className={cn(
@@ -41,17 +41,17 @@ export default function OpeningHours() {
             key={day}
             className={cn(
               'flex justify-between py-2 px-3 rounded-lg',
-              day === currentDay ? 'bg-orange-50 border border-orange-200' : ''
+              day === currentDay ? 'bg-[#F4F4F5] border border-[#E4E4E7]' : ''
             )}
           >
             <span className={cn(
               'capitalize',
-              day === currentDay ? 'font-semibold text-orange-700' : 'text-gray-200'
+              day === currentDay ? 'font-semibold text-[#27272A]' : 'text-gray-200'
             )}>
               {day}
             </span>
             <span className={cn(
-              day === currentDay ? 'font-semibold text-orange-700' : 'text-gray-200'
+              day === currentDay ? 'font-semibold text-[#27272A]' : 'text-gray-200'
             )}>
               {hours}
             </span>

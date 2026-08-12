@@ -48,7 +48,7 @@ export default function Captcha({ onValidate }: CaptchaProps) {
           value={userAnswer}
           onChange={(e) => setUserAnswer(e.target.value)}
           onBlur={validateCaptcha}
-          className='flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500'
+          className='flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]'
           placeholder='Your answer'
           inputMode='numeric'
           pattern='[0-9]*'

@@ -52,10 +52,10 @@ export default function MenuPage() {
       <Navigation />
       <main className="flex-1 bg-gray-50">
         {/* Header */}
-        <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16">
+        <div className="bg-gradient-to-r from-[#18181B] to-[#52525B] text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Menu</h1>
-            <p className="text-xl text-orange-100">
+            <p className="text-xl text-gray-200">
               Authentic North Indian cuisine crafted with passion
             </p>
           </div>
@@ -63,12 +63,12 @@ export default function MenuPage() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Text Menu */}
-          <div className="rounded-xl shadow-sm border border-orange-200 p-8 mb-12" style={{ backgroundColor: '#E8F0E3' }}>
+          <div className="rounded-xl shadow-sm border border-[#E4E4E7] p-8 mb-12" style={{ backgroundColor: '#E8F0E3' }}>
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Full Menu</h2>
             <div className="space-y-6">
               {Object.entries(menuData).map(([category, items]) => (
                 <div key={category}>
-                  <h3 className="text-lg font-semibold text-orange-700 mb-3">{category}</h3>
+                  <h3 className="text-lg font-semibold text-[#18181B] mb-3">{category}</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
                     {items.map((item) => (
                       <div key={item} className="text-sm text-gray-700">
@@ -84,7 +84,7 @@ export default function MenuPage() {
           {/* Menu Images Grid */}
           {loading ? (
             <div className="text-center py-12">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600 mx-auto"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#18181B] mx-auto"></div>
               <p className="text-gray-600 mt-4">Loading menu...</p>
             </div>
           ) : menuImages.length === 0 ? (
@@ -99,7 +99,7 @@ export default function MenuPage() {
                   key={image.id}
                   className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow"
                 >
-                  <div className="aspect-square bg-gradient-to-br from-orange-50 to-red-50">
+                  <div className="aspect-square bg-gradient-to-br from-[#F4F4F5] to-[#52525B]">
                     <img
                       src={image.public_url}
                       alt={image.file_name}

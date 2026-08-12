@@ -39,7 +39,7 @@ export default function Testimonials() {
 
         {loading ? (
           <div className="text-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-600 mx-auto"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#18181B] mx-auto"></div>
             <p className="text-gray-600 mt-4">Loading reviews...</p>
           </div>
         ) : reviews.length === 0 ? (
@@ -51,8 +51,8 @@ export default function Testimonials() {
           <>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {reviews.map((review) => (
-                <div key={review.id} className="rounded-xl shadow-sm border border-gray-100 p-6 relative" style={{ backgroundColor: '#FFF1E6' }}>
-                  <Quote className="absolute top-4 right-4 w-8 h-8 text-orange-200" />
+                <div key={review.id} className="rounded-xl shadow-sm border border-gray-100 p-6 relative" style={{ backgroundColor: '#F4F4F5' }}>
+                  <Quote className="absolute top-4 right-4 w-8 h-8 text-[#52525B]" />
                   <div className="flex items-center space-x-1 mb-3">
                     {[...Array(5)].map((_, i) => (
                       <Star
@@ -85,7 +85,7 @@ export default function Testimonials() {
             <div className="text-center mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/reviews"
-                className="inline-flex items-center space-x-2 text-orange-600 hover:text-orange-700 font-semibold"
+                className="inline-flex items-center space-x-2 text-[#18181B] hover:text-[#52525B] font-semibold"
               >
                 <span>Read All Reviews</span>
               </a>
@@ -93,7 +93,7 @@ export default function Testimonials() {
                 href="https://maps.app.goo.gl/Yrurwx8AecZ3RJSf9"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-orange-600 hover:text-orange-700 font-semibold"
+                className="inline-flex items-center space-x-2 text-[#18181B] hover:text-[#52525B] font-semibold"
               >
                 <ExternalLink className="w-4 h-4" />
                 <span>Read our Google Reviews</span>

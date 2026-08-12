@@ -90,7 +90,7 @@ export default function ReservationsPage() {
               </a>
               <button
                 onClick={() => setSubmitSuccess(false)}
-                className="bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors w-full"
+                className="bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors w-full"
               >
                 Make Another Reservation
               </button>
@@ -107,10 +107,10 @@ export default function ReservationsPage() {
       <Navigation />
       <main className="flex-1 bg-gray-50">
         {/* Header */}
-        <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16">
+        <div className="bg-gradient-to-r from-[#18181B] to-[#52525B] text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Reserve a Table</h1>
-            <p className="text-xl text-orange-100">
+            <p className="text-xl text-gray-200">
               Book your table in advance for a seamless dining experience
             </p>
           </div>
@@ -135,7 +135,7 @@ export default function ReservationsPage() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -152,7 +152,7 @@ export default function ReservationsPage() {
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -171,7 +171,7 @@ export default function ReservationsPage() {
                       value={formData.date}
                       onChange={handleChange}
                       min={new Date().toISOString().split('T')[0]}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
                     />
                   </div>
                   <div>
@@ -184,7 +184,7 @@ export default function ReservationsPage() {
                       required
                       value={formData.time}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
                     >
                       <option value="">Select time</option>
                       {[
@@ -212,7 +212,7 @@ export default function ReservationsPage() {
                     required
                     value={formData.party_size}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
                   >
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(size => (
                       <option key={size} value={size}>{size} Guest{size > 1 ? 's' : ''}</option>
@@ -232,7 +232,7 @@ export default function ReservationsPage() {
                     value={formData.special_requests}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
                     placeholder="Any dietary requirements, celebrations, or special requests?"
                   />
                 </div>
@@ -240,7 +240,7 @@ export default function ReservationsPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-orange-600 text-white px-6 py-3 rounded-lg hover:bg-orange-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+                  className="w-full bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Submitting...' : 'Confirm Reservation'}
                 </button>
@@ -253,19 +253,19 @@ export default function ReservationsPage() {
                 <h3 className="font-semibold text-gray-900 mb-4">Reservation Information</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-3">
-                    <Clock className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <Clock className="w-5 h-5 text-[#18181B] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600">
                       Reservations are accepted between 11:00 AM and 10:30 PM
                     </span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <Users className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <Users className="w-5 h-5 text-[#18181B] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600">
                       For parties larger than 10, please call us directly
                     </span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <MessageSquare className="w-5 h-5 text-orange-600 mt-0.5 flex-shrink-0" />
+                    <MessageSquare className="w-5 h-5 text-[#18181B] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-600">
                       We'll confirm your reservation via phone or WhatsApp
                     </span>
@@ -285,14 +285,14 @@ export default function ReservationsPage() {
                 </div>
               </div>
 
-              <div className="bg-orange-50 rounded-xl border border-orange-100 p-6">
+              <div className="bg-[#F4F4F5] rounded-xl border border-[#E4E4E7] p-6">
                 <h3 className="font-semibold text-gray-900 mb-2">Need Immediate Assistance?</h3>
                 <p className="text-gray-600 mb-4">
                   For same-day reservations or urgent inquiries, feel free to call us directly.
                 </p>
                 <a
                   href={`tel:+${RESTAURANT_INFO.phone}`}
-                  className="inline-flex items-center space-x-2 bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition-colors"
+                  className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-4 py-2 rounded-lg hover:bg-[#52525B] transition-colors"
                 >
                   <span>Call {RESTAURANT_INFO.phone}</span>
                 </a>
