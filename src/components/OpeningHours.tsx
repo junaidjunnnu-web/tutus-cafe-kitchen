@@ -6,8 +6,9 @@ import { cn } from '@/lib/utils'
 
 export default function OpeningHours() {
   const now = new Date()
-  const currentDay = now.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase()
-  const currentHour = now.getHours()
+  const istTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }))
+  const currentDay = istTime.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase()
+  const currentHour = istTime.getHours()
   
   const openHour = 11
   const closeHour = 23
