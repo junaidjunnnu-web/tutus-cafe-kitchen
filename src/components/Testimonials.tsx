@@ -69,7 +69,7 @@ export default function Testimonials() {
                     <img
                       src={review.photo_url || review.image_url}
                       alt={`Review by ${review.name}`}
-                      className="w-full h-32 object-cover rounded-lg mb-4"
+                      className="w-full max-h-48 object-contain rounded-lg mb-4 bg-gray-100"
                       loading="lazy"
                     />
                   )}
