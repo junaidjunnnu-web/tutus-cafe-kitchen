@@ -49,7 +49,7 @@ export default function Testimonials() {
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
               {reviews.map((review) => (
                 <div key={review.id} className="rounded-xl shadow-sm border border-gray-100 p-6 relative" style={{ backgroundColor: '#F4F4F5' }}>
                   <Quote className="absolute top-4 right-4 w-8 h-8 text-[#52525B]" />

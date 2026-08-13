@@ -171,7 +171,7 @@ export default function ReviewsPage() {
                 <p className="text-gray-600 mt-2">Loading reviews...</p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
                 {reviews.map((review) => (
                   <div
                     key={review.id}
