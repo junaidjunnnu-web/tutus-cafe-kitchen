@@ -162,3 +162,71 @@ export async function PATCH(request: NextRequest) {
     )
   }
 }
+
+export async function DELETE(request: NextRequest) {
+  try {
+    // Check admin authorization
+    const authHeader = request.headers.get('authorization')
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      return NextResponse.json(
+        { error: 'Unauthorized' },
+        { status: 401 }
+      )
+    }
+
+    const password = authHeader.substring(7)
+    if (!checkAdminPassword(password)) {
+      return NextResponse.json(
+        { error: 'Invalid credentials' },
+        { status: 401 }
+      )
+    }
+
+    const body = await request.json()
+    const { reservationId } = body
+
+    if (!reservationId) {
+      return NextResponse.json(
+        { error: 'Missing reservation ID' },
+        { status: 400 }
+      )
+    }
+
+    // Get service role key from environment (server-side only)
+    const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+
+    if (!serviceRoleKey || !supabaseUrl) {
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      )
+    }
+
+    const supabase = createClient(supabaseUrl, serviceRoleKey)
+
+    const { error } = await supabase
+      .from('reservations')
+      .delete()
+      .eq('id', reservationId)
+
+    if (error) {
+      console.error('Delete reservation error:', error)
+      return NextResponse.json(
+        { error: 'Failed to delete reservation' },
+        { status: 500 }
+      )
+    }
+
+    return NextResponse.json({
+      success: true
+    })
+
+  } catch (error) {
+    console.error('Admin reservation delete error:', error)
+    return NextResponse.json(
+      { error: 'Internal server error' },
+      { status: 500 }
+    )
+  }
+}

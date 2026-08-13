@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Upload, Lock, LogOut, Image as ImageIcon, Star, Trash2, Calendar } from 'lucide-react'
+import { Upload, Lock, LogOut, Image as ImageIcon, Star, Trash2, Calendar, MessageCircle } from 'lucide-react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
@@ -87,6 +87,46 @@ export default function AdminPage() {
     } catch (error) {
       console.error('Failed to update reservation:', error)
     }
+  }
+
+  // Delete reservation
+  const deleteReservation = async (reservationId: string) => {
+    if (!confirm('Are you sure you want to delete this reservation?')) {
+      return
+    }
+
+    try {
+      const ADMIN_PASSWORD = 'tutus2024' // Hardcoded admin password
+      const response = await fetch('/api/admin/reservations', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${ADMIN_PASSWORD}`
+        },
+        body: JSON.stringify({ reservationId })
+      })
+      const data = await response.json()
+      if (data.success) {
+        fetchReservations()
+      }
+    } catch (error) {
+      console.error('Failed to delete reservation:', error)
+    }
+  }
+
+  // Notify customer via WhatsApp
+  const notifyCustomer = (reservation: any) => {
+    const phone = reservation.phone.replace(/\D/g, '') // Remove non-digits
+    let message = ''
+    
+    if (reservation.status === 'confirmed') {
+      message = `Hi ${reservation.name}, your reservation at Tutu's Cafe and Kitchen for ${reservation.party_size} people on ${reservation.date} at ${reservation.time} has been CONFIRMED. We look forward to seeing you!`
+    } else if (reservation.status === 'cancelled') {
+      message = `Hi ${reservation.name}, we're sorry but your reservation at Tutu's Cafe and Kitchen for ${reservation.date} at ${reservation.time} could not be accommodated. Please contact us to reschedule.`
+    }
+    
+    const whatsappUrl = `https://wa.me/91${phone}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
   }
 
   // Delete review
@@ -560,6 +600,22 @@ export default function AdminPage() {
                             </button>
                           </>
                         )}
+                        {(reservation.status === 'confirmed' || reservation.status === 'cancelled') && (
+                          <button
+                            onClick={() => notifyCustomer(reservation)}
+                            className="flex items-center space-x-1 bg-green-600 text-white px-3 py-2 rounded-lg hover:bg-green-700 transition-colors text-sm"
+                          >
+                            <MessageCircle className="w-4 h-4" />
+                            <span>Notify via WhatsApp</span>
+                          </button>
+                        )}
+                        <button
+                          onClick={() => deleteReservation(reservation.id)}
+                          className="flex items-center space-x-1 bg-red-600 text-white px-3 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                          <span>Delete</span>
+                        </button>
                       </div>
                     </div>
                   </div>
