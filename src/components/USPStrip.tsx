@@ -2,7 +2,7 @@ import { CheckCircle } from 'lucide-react'
 
 export default function USPStrip() {
   const uspItems = [
-    { icon: "�️", text: "Veg & Non-Veg Specialties" },
+    { icon: "🍽️", text: "Veg & Non-Veg Specialities" },
     { icon: "🏆", text: "Award-Winning Chef" },
     { icon: "⚡", text: "Fast Delivery Service" },
     { icon: "💯", text: "Fresh Local Ingredients" }
