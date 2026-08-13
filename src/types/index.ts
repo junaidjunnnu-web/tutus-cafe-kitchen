@@ -16,6 +16,7 @@ export interface Review {
   text: string
   date: string
   image_url?: string
+  photo_url?: string
   verified?: boolean
   status?: 'pending' | 'approved' | 'rejected'
   submitted_at?: string
