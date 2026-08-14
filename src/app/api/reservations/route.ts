@@ -23,19 +23,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Create WhatsApp message
-    const message = `
-🍽️ *New Table Reservation*
-
-*Name:* ${name}
-*Phone:* ${phone}
-*Date:* ${date}
-*Time:* ${time}
-*Party Size:* ${party_size}
-*Special Requests:* ${special_requests || 'None'}
-
-Please confirm this reservation.
-    `.trim()
+    // Create WhatsApp message with proper formatting
+    const message = `📅 *New Reservation Request*%0A%0A*Restaurant:* Tutu's Cafe and Kitchen%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Date:* ${date}%0A*Time:* ${time}%0A*Party Size:* ${party_size}%0A*Special Requests:* ${special_requests || 'None'}%0A%0APlease confirm this booking. Thank you!`
 
     // Create WhatsApp deep link
     const whatsappLink = `https://wa.me/9448712901?text=${encodeURIComponent(message)}`
