@@ -26,12 +26,12 @@ export default function Hero() {
     fetchHeroImages()
   }, [])
 
-  // Auto-rotate hero images every 3 seconds
+  // Auto-rotate hero images every 2 seconds
   useEffect(() => {
     if (heroImages.length > 1) {
       const interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % heroImages.length)
-      }, 3000)
+      }, 2000)
       return () => clearInterval(interval)
     }
   }, [heroImages.length])
