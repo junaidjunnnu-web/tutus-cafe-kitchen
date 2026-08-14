@@ -116,6 +116,7 @@ export default function AdminPage() {
 
   // Notify customer via WhatsApp
   const notifyCustomer = (reservation: any) => {
+    const phone = reservation.phone.replace(/\D/g, '') // Remove non-digits
     let message = ''
     
     if (reservation.status === 'confirmed') {
@@ -124,7 +125,7 @@ export default function AdminPage() {
       message = `Hi ${reservation.name},\n\nWe're sorry — your reservation request at *Tutu's Cafe and Kitchen* could not be accommodated.\n\n📅 Date: ${reservation.date}\n🕐 Time: ${reservation.time}\n\nPlease contact us at 9448712901 to reschedule or check alternate slots.`
     }
     
-    const whatsappUrl = `https://wa.me/919448712901?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/91${phone}?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
 
