@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create WhatsApp message with proper formatting
-    const message = `📅 *New Reservation Request*%0A%0A*Restaurant:* Tutu's Cafe and Kitchen%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Date:* ${date}%0A*Time:* ${time}%0A*Party Size:* ${party_size}%0A*Special Requests:* ${special_requests || 'None'}%0A%0APlease confirm this booking. Thank you!`
+    const message = `📅 *New Reservation Request*\n\n*Restaurant:* Tutu's Cafe and Kitchen\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Date:* ${date}\n*Time:* ${time}\n*Party Size:* ${party_size}\n*Special Requests:* ${special_requests || 'None'}\n\nPlease confirm this booking. Thank you!`
 
     // Create WhatsApp deep link
     const whatsappLink = `https://wa.me/9448712901?text=${encodeURIComponent(message)}`
