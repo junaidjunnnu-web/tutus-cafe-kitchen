@@ -38,7 +38,7 @@ Please confirm this reservation.
     `.trim()
 
     // Create WhatsApp deep link
-    const whatsappLink = `https://wa.me/9379978866?text=${encodeURIComponent(message)}`
+    const whatsappLink = `https://wa.me/9448712901?text=${encodeURIComponent(message)}`
 
     // Get service role key from environment (server-side only)
     const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY

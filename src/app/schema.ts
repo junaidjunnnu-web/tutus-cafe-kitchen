@@ -18,16 +18,11 @@ export const restaurantSchema = {
     "longitude": 75.845271
   },
   "url": "https://tutuscafeandkitchen.com",
-  "telephone": "+919379978866",
+  "telephone": "+919448712901",
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+919019912901",
-      "contactType": "customer service"
-    },
-    {
-      "@type": "ContactPoint",
-      "telephone": "+919448712901",
+      "telephone": "+918276242173",
       "contactType": "customer service"
     }
   ],
