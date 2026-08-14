@@ -7,8 +7,13 @@ export function cn(...inputs: ClassValue[]) {
 
 export function isOpen(): boolean {
   const now = new Date()
+  const formatter = new Intl.DateTimeFormat('en-US', { 
+    timeZone: 'Asia/Kolkata',
+    weekday: 'long'
+  })
+  const currentDay = formatter.format(now)
+  
   const istTime = new Date(now.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }))
-  const day = istTime.getDay()
   const hour = istTime.getHours()
   
   // Restaurant hours: 11 AM - 11 PM daily
