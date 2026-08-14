@@ -170,7 +170,7 @@ export default function ReservationsPage() {
                       required
                       value={formData.date}
                       onChange={handleChange}
-                      min={new Date().toISOString().split('T')[0]}
+                      min={new Date().toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' })}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#18181B] focus:border-[#18181B]"
                     />
                   </div>
