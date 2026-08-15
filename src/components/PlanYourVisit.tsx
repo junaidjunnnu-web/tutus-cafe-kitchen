@@ -16,11 +16,11 @@ const attractions: Attraction[] = [
   { name: "Honnamana Kere", description: "Peaceful lake near Somwarpet", distance: "nearby" },
   { name: "Bisle Ghat Viewpoint", description: "Scenic Western Ghats viewpoint", distance: "nearby" },
   { name: "Makkala Gudi Betta", description: "Paddy field views, known as 'Kodaikanal of Kodagu'", distance: "~20 km" },
-  { name: "Abbey Falls", description: "Popular waterfall amid coffee & spice estates", distance: "~35-40 km" },
-  { name: "Raja's Seat", description: "Famous sunset viewpoint in Madikeri", distance: "~38-40 km" },
-  { name: "Madikeri Fort", description: "Historic fort and popular sightseeing stop", distance: "~38-40 km" },
+  { name: "Abbey Falls", description: "Popular waterfall amid coffee & spice estates", distance: "~42 km" },
+  { name: "Raja's Seat", description: "Famous sunset viewpoint in Madikeri", distance: "~42 km" },
+  { name: "Madikeri Fort", description: "Historic fort and popular sightseeing stop", distance: "~42 km" },
   { name: "Namdroling Monastery (Golden Temple)", description: "Large Buddhist monastery in Bylakuppe", distance: "~30-35 km" },
-  { name: "Talacauvery", description: "Sacred origin of the Kaveri River", distance: "~60-65 km" },
+  { name: "Talacauvery", description: "Sacred origin of the Kaveri River", distance: "~82 km" },
   { name: "Dubare Elephant Camp", description: "Elephant interaction & river rafting spot", distance: "~50 km" },
   { name: "Nisargadhama", description: "River-island nature park near Kushalnagar", distance: "~45 km" }
 ]
@@ -73,7 +73,8 @@ export default function PlanYourVisit() {
 
         {/* Location-based Directions */}
         <div className="rounded-xl shadow-sm border border-gray-100 p-8 text-center mb-12" style={{ backgroundColor: '#F4F4F5' }}>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Coming from somewhere else?</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Coming from somewhere else?</h3>
+          <p className="text-gray-600 mb-4">Get directions straight to Tutu's Cafe and Kitchen from your current location.</p>
           
           {locationError ? (
             <div>
