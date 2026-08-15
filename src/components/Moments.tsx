@@ -132,7 +132,7 @@ export default function Moments() {
         ) : moments.length === 0 ? (
           <div className="text-center py-12">
             <Heart className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-            <p className="text-gray-500 text-lg">Be the first to share a moment at Tutu's!</p>
+            <p className="text-gray-500 text-lg">Share your moments with us!</p>
             <button
               onClick={() => setShowUploadForm(true)}
               className="mt-4 inline-flex items-center space-x-2 bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors"
