@@ -1,14 +1,14 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Upload, Lock, LogOut, Image as ImageIcon, Star, Trash2, Calendar, MessageCircle } from 'lucide-react'
+import { Upload, Lock, LogOut, Image as ImageIcon, Star, Trash2, Calendar, MessageCircle, Heart } from 'lucide-react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export default function AdminPage() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [password, setPassword] = useState('')
-  const [activeTab, setActiveTab] = useState<'images' | 'reviews' | 'reservations'>('images')
+  const [activeTab, setActiveTab] = useState<'images' | 'reviews' | 'reservations' | 'moments'>('images')
   const [error, setError] = useState('')
 
   // Image upload state
@@ -25,6 +25,10 @@ export default function AdminPage() {
   // Reservations state
   const [reservations, setReservations] = useState<any[]>([])
   const [loadingReservations, setLoadingReservations] = useState(false)
+
+  // Moments state
+  const [moments, setMoments] = useState<any[]>([])
+  const [loadingMoments, setLoadingMoments] = useState(false)
 
   // Fetch all reviews
   const fetchAllReviews = async () => {
@@ -65,6 +69,52 @@ export default function AdminPage() {
       console.error('Failed to fetch reservations:', error)
     } finally {
       setLoadingReservations(false)
+    }
+  }
+
+  // Fetch moments
+  const fetchMoments = async () => {
+    setLoadingMoments(true)
+    try {
+      const ADMIN_PASSWORD = 'tutus2024' // Hardcoded admin password
+      const response = await fetch('/api/admin/moments', {
+        headers: {
+          'Authorization': `Bearer ${ADMIN_PASSWORD}`
+        }
+      })
+      const data = await response.json()
+      if (data.success) {
+        setMoments(data.moments)
+      }
+    } catch (error) {
+      console.error('Failed to fetch moments:', error)
+    } finally {
+      setLoadingMoments(false)
+    }
+  }
+
+  // Delete moment
+  const deleteMoment = async (momentId: string, photoUrl: string) => {
+    if (!confirm('Are you sure you want to delete this moment?')) {
+      return
+    }
+
+    try {
+      const ADMIN_PASSWORD = 'tutus2024' // Hardcoded admin password
+      const response = await fetch('/api/admin/moments', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${ADMIN_PASSWORD}`
+        },
+        body: JSON.stringify({ momentId, photoUrl })
+      })
+      const data = await response.json()
+      if (data.success) {
+        fetchMoments()
+      }
+    } catch (error) {
+      console.error('Failed to delete moment:', error)
     }
   }
 
@@ -163,6 +213,9 @@ export default function AdminPage() {
     }
     if (isAuthenticated && activeTab === 'reservations') {
       fetchReservations()
+    }
+    if (isAuthenticated && activeTab === 'moments') {
+      fetchMoments()
     }
   }, [isAuthenticated, activeTab])
 
@@ -364,6 +417,17 @@ export default function AdminPage() {
           >
             <Calendar className="w-5 h-5" />
             <span>Reservations</span>
+          </button>
+          <button
+            onClick={() => setActiveTab('moments')}
+            className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
+              activeTab === 'moments'
+                ? 'bg-[#18181B] text-white'
+                : 'bg-white text-gray-700 hover:bg-gray-100'
+            }`}
+          >
+            <Heart className="w-5 h-5" />
+            <span>Manage Moments</span>
           </button>
         </div>
 
@@ -610,6 +674,51 @@ export default function AdminPage() {
                           <span>Delete</span>
                         </button>
                       </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Moments Management */}
+        {activeTab === 'moments' && (
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <h2 className="text-xl font-bold text-gray-900 mb-6">Manage Moments</h2>
+
+            {loadingMoments ? (
+              <div className="text-center py-8">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#18181B] mx-auto"></div>
+                <p className="text-gray-600 mt-2">Loading moments...</p>
+              </div>
+            ) : moments.length === 0 ? (
+              <div className="text-center py-8">
+                <p className="text-gray-500">No moments shared yet</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {moments.map((moment) => (
+                  <div key={moment.id} className="border border-gray-200 rounded-lg overflow-hidden">
+                    <img
+                      src={moment.photo_url}
+                      alt="Guest moment"
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-4">
+                      {moment.caption && (
+                        <p className="text-gray-700 text-sm mb-2 line-clamp-2">"{moment.caption}"</p>
+                      )}
+                      <p className="text-xs text-gray-500 mb-3">
+                        {new Date(moment.created_at).toLocaleString()}
+                      </p>
+                      <button
+                        onClick={() => deleteMoment(moment.id, moment.photo_url)}
+                        className="flex items-center space-x-1 bg-red-600 text-white px-3 py-2 rounded-lg hover:bg-red-700 transition-colors text-sm w-full justify-center"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                        <span>Delete</span>
+                      </button>
                     </div>
                   </div>
                 ))}

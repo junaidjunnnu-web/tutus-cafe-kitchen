@@ -2,6 +2,7 @@ import Hero from '@/components/Hero'
 import USPStrip from '@/components/USPStrip'
 import FeaturedDishes from '@/components/FeaturedDishes'
 import Testimonials from '@/components/Testimonials'
+import Moments from '@/components/Moments'
 import OpeningHours from '@/components/OpeningHours'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -52,6 +53,7 @@ export default function Home() {
 
       <FeaturedDishes />
       <Testimonials />
+      <Moments />
 
       {/* Admin Panel Section */}
       <section className="py-12 bg-white">
