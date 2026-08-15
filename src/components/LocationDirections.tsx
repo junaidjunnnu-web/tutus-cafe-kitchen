@@ -36,7 +36,7 @@ export default function LocationDirections() {
   }
 
   return (
-    <section className="pt-4 pb-10 bg-gray-50">
+    <section className="pt-4 pb-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-xl shadow-sm border border-gray-100 p-8 text-center" style={{ backgroundColor: '#F4F4F5' }}>
           <h3 className="text-xl font-bold text-gray-900 mb-2">Coming from somewhere else?</h3>
