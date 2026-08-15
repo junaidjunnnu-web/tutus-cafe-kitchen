@@ -3,6 +3,7 @@ import USPStrip from '@/components/USPStrip'
 import FeaturedDishes from '@/components/FeaturedDishes'
 import Testimonials from '@/components/Testimonials'
 import Moments from '@/components/Moments'
+import LocationDirections from '@/components/LocationDirections'
 import PlanYourVisit from '@/components/PlanYourVisit'
 import OpeningHours from '@/components/OpeningHours'
 import Navigation from '@/components/Navigation'
@@ -55,6 +56,7 @@ export default function Home() {
       <FeaturedDishes />
       <Testimonials />
       <Moments />
+      <LocationDirections />
       <PlanYourVisit />
 
       {/* Admin Panel Section */}
