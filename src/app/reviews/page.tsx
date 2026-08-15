@@ -191,14 +191,6 @@ export default function ReviewsPage() {
                       ))}
                     </div>
 
-                    {(review.photo_url || review.image_url) && (
-                      <img
-                        src={review.photo_url || review.image_url}
-                        alt={`Review by ${review.name}`}
-                        className="w-full max-h-48 object-contain rounded-lg mb-4 bg-gray-100"
-                        loading="lazy"
-                      />
-                    )}
                     <p className="text-gray-700 mb-4 line-clamp-3">
                       "{review.text}"
                     </p>

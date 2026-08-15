@@ -504,14 +504,6 @@ export default function AdminPage() {
                           </div>
                         </div>
                         <p className="text-gray-600 text-sm mb-2">{review.text}</p>
-                        {(review.photo_url || review.image_url) && (
-                          <img
-                            src={review.photo_url || review.image_url}
-                            alt="Review photo"
-                            className="w-24 h-24 object-cover rounded-lg"
-                            loading="lazy"
-                          />
-                        )}
                         <p className="text-xs text-gray-500 mt-2">
                           {new Date(review.approved_at || review.submitted_at).toLocaleString()}
                         </p>
