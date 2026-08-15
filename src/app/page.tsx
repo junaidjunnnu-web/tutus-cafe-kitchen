@@ -3,6 +3,7 @@ import USPStrip from '@/components/USPStrip'
 import FeaturedDishes from '@/components/FeaturedDishes'
 import Testimonials from '@/components/Testimonials'
 import Moments from '@/components/Moments'
+import PlanYourVisit from '@/components/PlanYourVisit'
 import OpeningHours from '@/components/OpeningHours'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -54,6 +55,7 @@ export default function Home() {
       <FeaturedDishes />
       <Testimonials />
       <Moments />
+      <PlanYourVisit />
 
       {/* Admin Panel Section */}
       <section className="py-12 bg-white">
