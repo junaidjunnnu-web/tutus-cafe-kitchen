@@ -56,7 +56,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                       <div className="space-y-1">
                         <a
-                          href={`tel:+${RESTAURANT_INFO.phone}`}
+                          href={`tel:+91${RESTAURANT_INFO.phone}`}
                           className="text-gray-600 hover:text-[#52525B] transition-colors block"
                         >
                           {RESTAURANT_INFO.phone}
@@ -64,7 +64,7 @@ export default function ContactPage() {
                         {RESTAURANT_INFO.additional_phones?.map((phone) => (
                           <a
                             key={phone}
-                            href={`tel:+${phone}`}
+                            href={`tel:+91${phone.replace(/^0/, '')}`}
                             className="text-gray-600 hover:text-[#52525B] transition-colors block"
                           >
                             {phone}
@@ -73,7 +73,7 @@ export default function ContactPage() {
                       </div>
                       <div className="flex space-x-2 mt-2">
                         <a
-                          href={`tel:+${RESTAURANT_INFO.phone}`}
+                          href={`tel:+91${RESTAURANT_INFO.phone}`}
                           className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-3 py-1 rounded-lg hover:bg-[#52525B] transition-colors text-sm"
                         >
                           <Phone className="w-4 h-4" />

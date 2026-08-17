@@ -61,14 +61,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-[#52525B]" />
-                <a href={`tel:+${RESTAURANT_INFO.phone}`} className="text-gray-400 hover:text-white transition-colors">
+                <a href={`tel:+91${RESTAURANT_INFO.phone}`} className="text-gray-400 hover:text-white transition-colors">
                   {RESTAURANT_INFO.phone}
                 </a>
               </li>
               {RESTAURANT_INFO.additional_phones?.map((phone) => (
                 <li key={phone} className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-[#52525B]" />
-                  <a href={`tel:+${phone}`} className="text-gray-400 hover:text-white transition-colors">
+                  <a href={`tel:+91${phone.replace(/^0/, '')}`} className="text-gray-400 hover:text-white transition-colors">
                     {phone}
                   </a>
                 </li>

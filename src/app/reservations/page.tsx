@@ -291,7 +291,7 @@ export default function ReservationsPage() {
                   For same-day reservations or urgent inquiries, feel free to call us directly.
                 </p>
                 <a
-                  href={`tel:+${RESTAURANT_INFO.phone}`}
+                  href={`tel:+91${RESTAURANT_INFO.phone}`}
                   className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-4 py-2 rounded-lg hover:bg-[#52525B] transition-colors"
                 >
                   <span>Call {RESTAURANT_INFO.phone}</span>
