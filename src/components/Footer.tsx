@@ -1,8 +1,12 @@
+'use client'
+
 import Link from 'next/link'
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 import { RESTAURANT_INFO } from '@/lib/data'
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="text-white" style={{ backgroundColor: '#18181B' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -96,7 +100,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Tutu's Cafe and Kitchen. All rights reserved.</p>
+          <p>&copy; {currentYear} Tutu's Cafe and Kitchen. All rights reserved.</p>
         </div>
       </div>
     </footer>
