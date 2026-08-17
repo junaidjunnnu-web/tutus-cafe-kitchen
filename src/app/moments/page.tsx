@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import { Camera, Upload, XCircle, Heart } from 'lucide-react'
-import Link from 'next/link'
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 
-export default function Moments() {
+export default function MomentsPage() {
   const [moments, setMoments] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
   const [uploading, setUploading] = useState(false)
-  const [uploadedPhotoUrl, setUploadedPhotoUrl] = useState('')
+  const [uploadedPhotoUrl, setUploadedImageUrl] = useState('')
   const [showUploadForm, setShowUploadForm] = useState(false)
   const [formData, setFormData] = useState({
     photo: null as File | null,
@@ -66,7 +67,7 @@ export default function Moments() {
       const data = await response.json()
 
       if (data.success) {
-        setUploadedPhotoUrl(data.url)
+        setUploadedImageUrl(data.url)
       } else {
         setUploadError('Failed to upload image')
       }
@@ -105,7 +106,7 @@ export default function Moments() {
       if (data.success) {
         setShowUploadForm(false)
         setFormData({ photo: null, caption: '' })
-        setUploadedPhotoUrl('')
+        setUploadedImageUrl('')
         fetchMoments() // Refresh the grid
       } else {
         setUploadError(data.error || 'Failed to share moment')
@@ -118,68 +119,69 @@ export default function Moments() {
   }
 
   return (
-    <section className="py-10 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Moments at Tutu's</h2>
-          <p className="text-gray-600">Shared by our guests</p>
+    <div className="flex flex-col min-h-screen">
+      <Navigation />
+      <main className="flex-1 bg-gray-50">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-[#18181B] to-[#52525B] text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Moments at Tutu's</h1>
+            <p className="text-xl text-gray-200">
+              Shared by our guests
+            </p>
+          </div>
         </div>
 
-        {loading ? (
-          <div className="text-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#18181B] mx-auto"></div>
-            <p className="text-gray-600 mt-4">Loading moments...</p>
-          </div>
-        ) : moments.length === 0 ? (
-          <div className="text-center py-12">
-            <Heart className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-            <p className="text-gray-500 text-lg">Share your moments with us!</p>
-            <button
-              onClick={() => setShowUploadForm(true)}
-              className="mt-4 inline-flex items-center space-x-2 bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors"
-            >
-              <Camera className="w-5 h-5" />
-              <span>Add Your Photo</span>
-            </button>
-          </div>
-        ) : (
-          <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              {moments.slice(0, 6).map((moment) => (
-                <div key={moment.id} className="rounded-xl shadow-sm border border-gray-100 overflow-hidden" style={{ backgroundColor: '#F4F4F5' }}>
-                  <img
-                    src={moment.photo_url}
-                    alt="Guest moment"
-                    className="w-full h-64 object-cover"
-                    loading="lazy"
-                  />
-                  {moment.caption && (
-                    <div className="p-4">
-                      <p className="text-gray-700 text-sm line-clamp-2">"{moment.caption}"</p>
-                    </div>
-                  )}
-                </div>
-              ))}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {loading ? (
+            <div className="text-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#18181B] mx-auto"></div>
+              <p className="text-gray-600 mt-4">Loading moments...</p>
             </div>
-
-            <div className="text-center space-x-4">
+          ) : moments.length === 0 ? (
+            <div className="text-center py-12">
+              <Heart className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+              <p className="text-gray-500 text-lg">Share your moments with us!</p>
               <button
                 onClick={() => setShowUploadForm(true)}
-                className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors"
+                className="mt-4 inline-flex items-center space-x-2 bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors"
               >
                 <Camera className="w-5 h-5" />
                 <span>Add Your Photo</span>
               </button>
-              <Link
-                href="/moments"
-                className="inline-flex items-center space-x-2 bg-[#52525B] text-white px-6 py-3 rounded-lg hover:bg-[#18181B] transition-colors"
-              >
-                <Heart className="w-5 h-5" />
-                <span>See All Photos</span>
-              </Link>
             </div>
-          </>
-        )}
+          ) : (
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                {moments.map((moment) => (
+                  <div key={moment.id} className="rounded-xl shadow-sm border border-gray-100 overflow-hidden" style={{ backgroundColor: '#F4F4F5' }}>
+                    <img
+                      src={moment.photo_url}
+                      alt="Guest moment"
+                      className="w-full h-64 object-cover"
+                      loading="lazy"
+                    />
+                    {moment.caption && (
+                      <div className="p-4">
+                        <p className="text-gray-700 text-sm line-clamp-2">"{moment.caption}"</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <button
+                  onClick={() => setShowUploadForm(true)}
+                  className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors"
+                >
+                  <Camera className="w-5 h-5" />
+                  <span>Add Your Photo</span>
+                </button>
+              </div>
+            </>
+          )}
+        </div>
 
         {showUploadForm && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -190,7 +192,7 @@ export default function Moments() {
                   onClick={() => {
                     setShowUploadForm(false)
                     setFormData({ photo: null, caption: '' })
-                    setUploadedPhotoUrl('')
+                    setUploadedImageUrl('')
                     setUploadError('')
                   }}
                   className="text-gray-400 hover:text-gray-600"
@@ -215,7 +217,7 @@ export default function Moments() {
                         <button
                           type="button"
                           onClick={() => {
-                            setUploadedPhotoUrl('')
+                            setUploadedImageUrl('')
                             setFormData({ ...formData, photo: null })
                           }}
                           className="absolute top-2 right-2 bg-red-500 text-white p-1 rounded-full hover:bg-red-600"
@@ -285,7 +287,7 @@ export default function Moments() {
                     onClick={() => {
                       setShowUploadForm(false)
                       setFormData({ photo: null, caption: '' })
-                      setUploadedPhotoUrl('')
+                      setUploadedImageUrl('')
                       setUploadError('')
                     }}
                     className="flex-1 bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition-colors"
@@ -304,7 +306,8 @@ export default function Moments() {
             </div>
           </div>
         )}
-      </div>
-    </section>
+      </main>
+      <Footer />
+    </div>
   )
 }

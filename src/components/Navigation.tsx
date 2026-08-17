@@ -26,6 +26,7 @@ export default function Navigation() {
             <Link href="/menu" className="text-gray-700 hover:text-[#52525B] transition-colors">Menu</Link>
             <Link href="/about" className="text-gray-700 hover:text-[#52525B] transition-colors">About</Link>
             <Link href="/gallery" className="text-gray-700 hover:text-[#52525B] transition-colors">Gallery</Link>
+            <Link href="/moments" className="text-gray-700 hover:text-[#52525B] transition-colors">Moments</Link>
             <Link href="/reviews" className="text-gray-700 hover:text-[#52525B] transition-colors">Reviews</Link>
             <Link href="/contact" className="text-gray-700 hover:text-[#52525B] transition-colors">Contact</Link>
             <Link href="/reservations" className="bg-[#18181B] text-white px-4 py-2 rounded-lg hover:bg-[#52525B] transition-colors">
@@ -49,6 +50,7 @@ export default function Navigation() {
             <Link href="/menu" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">Menu</Link>
             <Link href="/about" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">About</Link>
             <Link href="/gallery" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">Gallery</Link>
+            <Link href="/moments" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">Moments</Link>
             <Link href="/reviews" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">Reviews</Link>
             <Link href="/contact" className="block text-gray-700 hover:text-[#52525B] transition-colors py-2">Contact</Link>
             <Link href="/reservations" className="block bg-[#18181B] text-white px-4 py-2 rounded-lg hover:bg-[#52525B] transition-colors text-center">
