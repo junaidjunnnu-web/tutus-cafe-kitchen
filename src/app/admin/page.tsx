@@ -170,9 +170,9 @@ export default function AdminPage() {
     let message = ''
     
     if (reservation.status === 'confirmed') {
-      message = `Hi ${reservation.name}! 👋\n\nYour reservation at *Tutu's Cafe and Kitchen* is *CONFIRMED* ✅\n\n📅 Date: ${reservation.date}\n🕐 Time: ${reservation.time}\n👥 Party Size: ${reservation.party_size}\n\nWe look forward to seeing you! For any changes, call us at 9448712901.`
+      message = `Hi ${reservation.name}! 👋\n\nYour reservation at *Tutu's Cafe and Kitchen* is *CONFIRMED* ✅\n\n📅 Date: ${reservation.date}\n🕐 Time: ${reservation.time}\n👥 Party Size: ${reservation.party_size}\n\nWe look forward to seeing you! For any changes, call us at 9019912901.`
     } else if (reservation.status === 'cancelled') {
-      message = `Hi ${reservation.name},\n\nWe're sorry — your reservation request at *Tutu's Cafe and Kitchen* could not be accommodated.\n\n📅 Date: ${reservation.date}\n🕐 Time: ${reservation.time}\n\nPlease contact us at 9448712901 to reschedule or check alternate slots.`
+      message = `Hi ${reservation.name},\n\nWe're sorry — your reservation request at *Tutu's Cafe and Kitchen* could not be accommodated.\n\n📅 Date: ${reservation.date}\n🕐 Time: ${reservation.time}\n\nPlease contact us at 9019912901 to reschedule or check alternate slots.`
     }
     
     const whatsappUrl = `https://wa.me/91${phone}?text=${encodeURIComponent(message)}`

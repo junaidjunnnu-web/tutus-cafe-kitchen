@@ -37,7 +37,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ADMIN_PASSWORD=tutus2024
 
 # Restaurant Contact Info
-RESTAURANT_PHONE=919448712901
+RESTAURANT_PHONE=919019912901
 RESTAURANT_EMAIL=info@tutuscafe.com
 
 # Google Maps Embed API Key (optional)
@@ -127,8 +127,8 @@ vercel
 ## 📱 Contact Integration
 
 ### WhatsApp
-- Phone: `919448712901`
-- Deep link format: `https://wa.me/919448712901?text=message`
+- Phone: `919019912901`
+- Deep link format: `https://wa.me/919019912901?text=message`
 - Pre-filled messages for reservations and inquiries
 
 ### Google Maps
@@ -137,7 +137,7 @@ vercel
 - Directions button links to Google Maps
 
 ### Click-to-Call
-- Direct phone link: `tel:+919448712901`
+- Direct phone link: `tel:+919019912901`
 
 ## 🔧 Customization
 
@@ -192,8 +192,8 @@ Replace placeholder emojis with actual images from Supabase:
 
 For issues or questions:
 - Email: info@tutuscafe.com
-- Phone: 919448712901
-- WhatsApp: https://wa.me/919448712901
+- Phone: 919019912901
+- WhatsApp: https://wa.me/919019912901
 
 ## 📄 License
 

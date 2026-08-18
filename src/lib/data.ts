@@ -3,8 +3,7 @@ import { MenuItem, Review, RestaurantInfo } from '@/types'
 export const RESTAURANT_INFO: RestaurantInfo = {
   name: "Tutu's Cafe and Kitchen",
   address: "Madikeri Road, Somwarpet, Karnataka 571236",
-  phone: "9448712901",
-  additional_phones: ["08276242173"],
+  phone: "9019912901",
   email: "tutuscafe2022@gmail.com",
   hours: {
     monday: "11:00 AM - 11:00 PM",

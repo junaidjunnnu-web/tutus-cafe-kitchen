@@ -61,15 +61,6 @@ export default function ContactPage() {
                         >
                           {RESTAURANT_INFO.phone}
                         </a>
-                        {RESTAURANT_INFO.additional_phones?.map((phone) => (
-                          <a
-                            key={phone}
-                            href={`tel:+91${phone.replace(/^0/, '')}`}
-                            className="text-gray-600 hover:text-[#52525B] transition-colors block"
-                          >
-                            {phone}
-                          </a>
-                        ))}
                       </div>
                       <div className="flex space-x-2 mt-2">
                         <a

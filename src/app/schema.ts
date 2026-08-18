@@ -18,14 +18,7 @@ export const restaurantSchema = {
     "longitude": 75.845271
   },
   "url": "https://tutuscafeandkitchen.com",
-  "telephone": "+919448712901",
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+918276242173",
-      "contactType": "customer service"
-    }
-  ],
+  "telephone": "+919019912901",
   "servesCuisine": ["Indian", "North Indian"],
   "priceRange": "₹200-400",
   "openingHoursSpecification": [

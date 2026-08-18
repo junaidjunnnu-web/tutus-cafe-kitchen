@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     const message = `📅 *New Reservation Request*\n\n*Restaurant:* Tutu's Cafe and Kitchen\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Date:* ${date}\n*Time:* ${time}\n*Party Size:* ${party_size}\n*Special Requests:* ${special_requests || 'None'}\n\nPlease confirm this booking. Thank you!`
 
     // Create WhatsApp deep link
-    const whatsappLink = `https://wa.me/9448712901?text=${encodeURIComponent(message)}`
+    const whatsappLink = `https://wa.me/919019912901?text=${encodeURIComponent(message)}`
 
     // Get service role key from environment (server-side only)
     const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
