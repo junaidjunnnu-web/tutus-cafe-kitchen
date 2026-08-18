@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   title: "Tutu's Cafe and Kitchen | North Indian Restaurant in Somwarpet, Kodagu",
   description: "Family-run North Indian restaurant in Somwarpet, Kodagu, Karnataka. Known for tandoori, biryani, and butter chicken. Dine-in, takeaway, and delivery.",
   keywords: ["North Indian restaurant", "Somwarpet restaurant", "Coorg dining", "butter chicken", "tandoori", "biryani", "family restaurant"],
+  icons: {
+    icon: "/tutus-logo.png",
+  },
   openGraph: {
     title: "Tutu's Cafe and Kitchen | North Indian Restaurant in Somwarpet, Kodagu",
     description: "Family-run North Indian restaurant in Somwarpet, Kodagu, Karnataka. Known for tandoori, biryani, and butter chicken. Dine-in, takeaway, and delivery.",

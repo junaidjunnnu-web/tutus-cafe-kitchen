@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 import { RESTAURANT_INFO } from '@/lib/data'
 
@@ -13,7 +14,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Tutu's Cafe and Kitchen</h3>
+            <div className="mb-4">
+              <Image
+                src="/tutus-logo.png"
+                alt="Tutu's Cafe and Kitchen"
+                width={88}
+                height={60}
+                className="object-contain"
+              />
+            </div>
             <p className="text-gray-400 mb-4">
               Authentic North Indian cuisine in the heart of Coorg
             </p>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, Phone, Clock } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { isOpen as checkIsOpen } from '@/lib/utils'
@@ -16,8 +17,13 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold text-[#18181B]">Tutu's</span>
-            <span className="text-2xl font-light text-gray-800">Cafe and Kitchen</span>
+            <Image
+              src="/tutus-logo.png"
+              alt="Tutu's Cafe and Kitchen"
+              width={66}
+              height={45}
+              className="object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
