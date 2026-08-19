@@ -118,20 +118,20 @@ export default function Moments() {
   }
 
   return (
-    <section className="py-10 bg-gray-50">
+    <section className="py-8 bg-[#F4F4F5]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Moments at Tutu's</h2>
           <p className="text-gray-600">Shared by our guests</p>
         </div>
 
         {loading ? (
-          <div className="text-center py-12">
+          <div className="text-center py-8">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#18181B] mx-auto"></div>
             <p className="text-gray-600 mt-4">Loading moments...</p>
           </div>
         ) : moments.length === 0 ? (
-          <div className="text-center py-12">
+          <div className="text-center py-8">
             <Heart className="w-16 h-16 text-gray-300 mx-auto mb-4" />
             <p className="text-gray-500 text-lg">Share your moments with us!</p>
             <button
@@ -144,9 +144,9 @@ export default function Moments() {
           </div>
         ) : (
           <>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
               {moments.slice(0, 6).map((moment) => (
-                <div key={moment.id} className="rounded-xl shadow-sm border border-gray-100 overflow-hidden" style={{ backgroundColor: '#F4F4F5' }}>
+                <div key={moment.id} className="rounded-xl shadow-sm border border-gray-100 overflow-hidden bg-white">
                   <img
                     src={moment.photo_url}
                     alt="Guest moment"

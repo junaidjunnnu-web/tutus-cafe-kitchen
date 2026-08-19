@@ -7,7 +7,6 @@ import LocationDirections from '@/components/LocationDirections'
 import OpeningHours from '@/components/OpeningHours'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { Lock } from 'lucide-react'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -58,15 +57,11 @@ export default function Home() {
       <LocationDirections />
 
       {/* Admin Panel Section */}
-      <section className="py-12 bg-white">
+      <section className="py-4 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <a
-            href="/admin"
-            className="inline-flex items-center space-x-2 bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors"
-          >
-            <Lock className="w-5 h-5" />
-            <span>Admin Panel</span>
-          </a>
+          <span className="text-gray-500 text-sm">
+            Restaurant owner? <a href="/admin" className="text-gray-700 underline hover:text-gray-900">Admin login</a>
+          </span>
         </div>
       </section>
     </main>
