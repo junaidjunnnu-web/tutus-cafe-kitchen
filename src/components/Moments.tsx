@@ -162,7 +162,7 @@ export default function Moments() {
               ))}
             </div>
 
-            <div className="text-center space-x-4">
+            <div className="text-center flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
               <button
                 onClick={() => setShowUploadForm(true)}
                 className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors"

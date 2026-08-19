@@ -384,7 +384,7 @@ export default function AdminPage() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Tabs */}
-        <div className="flex space-x-4 mb-8">
+        <div className="flex flex-wrap gap-2 md:gap-4 mb-8">
           <button
             onClick={() => setActiveTab('images')}
             className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
