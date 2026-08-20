@@ -9,7 +9,7 @@ const menuData = {
   "SOUP NON-VEG": ["Chicken Garlic", "Chicken Hot 'n' Sour", "Chicken Manchow", "Chicken Sweet Corn"],
   "TANDOORI STARTER VEG": ["Aloo Tikka", "Paneer Tikka"],
   "TANDOORI STARTER NON-VEG": ["Chicken Hariyali Kebab", "Chicken Kalmi Kebab", "Chicken Malai Kebab", "Chicken Tandoori (Half)", "Chicken Tandoori (Full)", "Chicken Shole Kebab", "Chicken Tikka", "Fish Tikka", "Prawn Tikka"],
-  "STARTER VEG": ["French Fry", "French Fry Piri Piri", "Onion Pakoda", "Paneer Pakoda", "Potato Chilli", "Potato Manchurian", "Paneer Chilli", "Paneer Manchurian", "Baby Corn Chilli", "Baby Corn Manchurian", "Gobi Chilli", "Gobi Manchurian", "Mushroom Chilli", "Mushroom Manchurian", "Peanut Masala", "Dahi Ka Kebab", "Paneer Pepper", "Veg Hara Bhara Kebab", "Veg Spring Roll", "Tutu's Spl. Veg Ginger"],
+  "STARTER VEG": ["French Fry", "French Fry Piri Piri", "Onion Pakoda", "Paneer Pakoda", "Potato Chilli", "Potato Manchurian", "Paneer Chilli", "Paneer Manchurian", "Baby Corn Chilli", "Baby Corn Manchurian", "Gobi Chilli", "Gobi Manchurian", "Mushroom Chilli", "Mushroom Manchurian", "Peanut Masala", "Paneer Pepper", "Veg Hara Bhara Kebab", "Veg Spring Roll", "Tutu's Spl. Veg Ginger"],
   "STARTER NON-VEG": ["Chicken 65 (B)", "Chicken 65 (B/L)", "Chicken Chilli (B)", "Chicken Chilli (B/L)", "Chicken Fry (B)", "Chicken Fry (B/L)", "Chicken Lemon (B)", "Chicken Lemon (B/L)", "Chicken Lollipop", "Chicken Manchurian (B)", "Chicken Manchurian (B/L)", "Chicken Oil Fry Kebab (B)", "Chicken Oil Fry Kebab (B/L)", "Chicken Spring Roll", "Egg Bhurji", "Egg Chilli", "Egg Omlet", "Egg Pakoda", "Fish Chilli", "Fish Fry", "Fish Manchurian", "Mutton Fry (B)", "Mutton Pepper (B)", "Prawn Chilli", "Prawn Fry", "Prawn Manchurian"],
   "BIHARI": ["Litti Chokha", "Sattu Paratha", "Sattu Lassi"],
   "MAIN COURSE VEG": ["Alu Gobi / Alu Mutter Masala", "Alu Gobi Mutter Masala", "Alu Jeera/Alu Palak", "Alu Tomato", "Baby Corn Masala", "Bhindi Masala", "Capsicum Masala", "Green Peas Masala", "Kadai Paneer", "Kadai Veg", "Kaju Masala", "Kadhi Pakoda", "Mix Veg Curry", "Mushroom Masala", "Palak Paneer", "Paneer Butter Masala", "Plain Palak", "Dal Makhani", "Dal Tadka Yellow", "Tutu's Spl. Malai Kofta", "Tutu's Veg Kofta", "Tutu's Veg Hyderabadi", "Tutu's Veg Kolhapuri"],
@@ -24,6 +24,7 @@ const menuData = {
   "SALAD": ["Green Salad", "Cucumber Salad", "Onion Salad"],
   "RAITA": ["Mix Raita", "Curd", "Boondi Raita"],
   "PAPAD": ["Papad Dry/Fry", "Masala Papad"],
+  "COOL BEVERAGE": ["Butter Milk", "Soft Drink", "Fresh Lime Soda", "Fresh Lime Water", "Lassi Salt/Sweet", "Lassi Gud Ka (Jaggery)", "Masala Pepsi/Sattu Lassi", "Mineral Water 1 LT"],
   "FLAVOURED SODA": ["Banana/Kiwi/Litchi/Mango", "Black Current/Blueberry", "Butter Scotch/Guava/Orange", "Pineapple/Strawberry/Chikoo"],
   "FLAVOURED MILK SHAKE": ["Banana/Kiwi/Litchi/Mango", "Black Current/Blueberry", "Butter Scotch/Guava/Orange", "Pineapple/Strawberry/Chikoo"],
   "SWEET": ["Gulab Jamun", "Shahi Tukda", "Bihari Sattu Peda", "Arun Ice Cream"]
