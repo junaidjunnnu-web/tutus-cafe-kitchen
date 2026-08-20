@@ -1,8 +1,49 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import { Award, Users, Heart, ChefHat } from 'lucide-react'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
 export default function AboutPage() {
+  const [aboutImages, setAboutImages] = useState<any[]>([])
+  const [chefImages, setChefImages] = useState<any[]>([])
+  const [ambianceImages, setAmbianceImages] = useState<any[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        // Fetch About category images for "Our Kitchen Team"
+        const aboutResponse = await fetch('/api/images?category=about')
+        const aboutData = await aboutResponse.json()
+        if (aboutData.success) {
+          setAboutImages(aboutData.images)
+        }
+
+        // Fetch Chef category images for "Meet Our Chef"
+        const chefResponse = await fetch('/api/images?category=chef')
+        const chefData = await chefResponse.json()
+        if (chefData.success) {
+          setChefImages(chefData.images)
+        }
+
+        // Fetch Gallery category images for "Our Ambiance" (using gallery images for ambiance sections)
+        const galleryResponse = await fetch('/api/images?category=gallery')
+        const galleryData = await galleryResponse.json()
+        if (galleryData.success) {
+          setAmbianceImages(galleryData.images)
+        }
+      } catch (error) {
+        console.error('Failed to fetch images:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchImages()
+  }, [])
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navigation />
@@ -43,8 +84,16 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              <div className="relative h-80 bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-lg flex items-center justify-center">
-                <div className="text-8xl">👨‍🍳</div>
+              <div className="relative h-80 bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-lg flex items-center justify-center overflow-hidden">
+                {aboutImages.length > 0 ? (
+                  <img
+                    src={aboutImages[0].public_url}
+                    alt="Our Kitchen Team"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="text-8xl">👨‍🍳</div>
+                )}
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
                   <p className="text-sm font-medium text-gray-800">Our Kitchen Team</p>
                 </div>
@@ -99,8 +148,16 @@ export default function AboutPage() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Meet Our Chef</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="relative h-96 bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-lg flex items-center justify-center">
-                <div className="text-9xl">👨‍🍳</div>
+              <div className="relative h-96 bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-lg flex items-center justify-center overflow-hidden">
+                {chefImages.length > 0 ? (
+                  <img
+                    src={chefImages[0].public_url}
+                    alt="Head Chef"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="text-9xl">👨‍🍳</div>
+                )}
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Head Chef</h3>
@@ -126,20 +183,44 @@ export default function AboutPage() {
           <div className="mt-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Ambience</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="relative h-64 bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-lg flex items-center justify-center">
-                <div className="text-6xl">🍽️</div>
+              <div className="relative h-64 bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-lg flex items-center justify-center overflow-hidden">
+                {ambianceImages.length > 0 ? (
+                  <img
+                    src={ambianceImages[0].public_url}
+                    alt="Dining Hall"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="text-6xl">🍽️</div>
+                )}
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
                   <p className="text-sm font-medium text-gray-800">Dining Hall</p>
                 </div>
               </div>
-              <div className="relative h-64 bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-lg flex items-center justify-center">
-                <div className="text-6xl">🔥</div>
+              <div className="relative h-64 bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-lg flex items-center justify-center overflow-hidden">
+                {ambianceImages.length > 1 ? (
+                  <img
+                    src={ambianceImages[1].public_url}
+                    alt="Tandoor Station"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="text-6xl">🔥</div>
+                )}
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
                   <p className="text-sm font-medium text-gray-800">Tandoor Station</p>
                 </div>
               </div>
-              <div className="relative h-64 bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-lg flex items-center justify-center">
-                <div className="text-6xl">👨‍👩‍👧‍👦</div>
+              <div className="relative h-64 bg-gradient-to-br from-[#F4F4F5] to-[#52525B] rounded-lg flex items-center justify-center overflow-hidden">
+                {ambianceImages.length > 2 ? (
+                  <img
+                    src={ambianceImages[2].public_url}
+                    alt="Family Seating"
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="text-6xl">👨‍👩‍👧‍👦</div>
+                )}
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg">
                   <p className="text-sm font-medium text-gray-800">Family Seating</p>
                 </div>
