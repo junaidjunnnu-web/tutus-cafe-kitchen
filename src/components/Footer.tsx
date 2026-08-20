@@ -27,7 +27,7 @@ export default function Footer() {
               Authentic North Indian cuisine in the heart of Coorg
             </p>
             <div className="flex space-x-4">
-              <span className="text-xl">�</span>
+              <span className="text-xl">🔥</span>
               <span className="text-xl">🍛</span>
               <span className="text-xl">🍢</span>
             </div>
