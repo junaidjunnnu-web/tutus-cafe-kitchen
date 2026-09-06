@@ -39,7 +39,7 @@ export default function Testimonials() {
 
         {loading ? (
           <div className="text-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-yellow-400 mx-auto"></div>
             <p className="text-gray-300 mt-4">Loading reviews...</p>
           </div>
         ) : reviews.length === 0 ? (
