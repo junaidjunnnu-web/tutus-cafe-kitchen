@@ -53,8 +53,20 @@ export default function Home() {
 
       <FeaturedDishes />
       <Testimonials />
-      <Moments />
-      <LocationDirections />
+      
+      {/* Moments and Location Section */}
+      <section className="py-12 bg-[#F4F4F5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+              <Moments />
+            </div>
+            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+              <LocationDirections />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Admin Panel Section */}
       <section className="py-4 bg-white">

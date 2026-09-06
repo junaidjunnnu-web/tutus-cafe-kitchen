@@ -36,44 +36,44 @@ export default function LocationDirections() {
   }
 
   return (
-    <section className="pt-8 pb-8 bg-[#F4F4F5]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h3 className="text-xl font-bold text-gray-900 mb-2">Coming from somewhere else?</h3>
-          <p className="text-gray-600 mb-4">Get directions straight to Tutu's Cafe and Kitchen from your current location.</p>
-          
-          {locationError ? (
-            <div>
-              <p className="text-gray-600 mb-4">{locationError}</p>
-              <button
-                onClick={openGoogleMapsFallback}
-                className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors"
-              >
-                <MapPin className="w-5 h-5" />
-                <span>Open in Google Maps</span>
-              </button>
-            </div>
-          ) : (
-            <button
-              onClick={handleGetDirectionsFromLocation}
-              disabled={loadingLocation}
-              className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-6 py-3 rounded-lg hover:bg-[#52525B] transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
-            >
-              {loadingLocation ? (
-                <>
-                  <Loader2 className="w-5 h-5 animate-spin" />
-                  <span>Getting your location...</span>
-                </>
-              ) : (
-                <>
-                  <Navigation className="w-5 h-5" />
-                  <span>Get Directions from My Location</span>
-                </>
-              )}
-            </button>
-          )}
-        </div>
+    <>
+      <div className="text-center mb-6">
+        <h3 className="text-xl font-bold text-gray-900 mb-2">Coming from somewhere else?</h3>
+        <p className="text-gray-600 text-sm">Get directions straight to Tutu's Cafe and Kitchen from your current location.</p>
       </div>
-    </section>
+      
+      <div className="text-center">
+        {locationError ? (
+          <div>
+            <p className="text-gray-600 mb-4 text-sm">{locationError}</p>
+            <button
+              onClick={openGoogleMapsFallback}
+              className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-5 py-2.5 rounded-lg hover:bg-[#52525B] transition-colors text-sm"
+            >
+              <MapPin className="w-4 h-4" />
+              <span>Open in Google Maps</span>
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={handleGetDirectionsFromLocation}
+            disabled={loadingLocation}
+            className="inline-flex items-center space-x-2 bg-[#18181B] text-white px-5 py-2.5 rounded-lg hover:bg-[#52525B] transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed text-sm"
+          >
+            {loadingLocation ? (
+              <>
+                <Loader2 className="w-4 h-4 animate-spin" />
+                <span>Getting your location...</span>
+              </>
+            ) : (
+              <>
+                <Navigation className="w-4 h-4" />
+                <span>Get Directions from My Location</span>
+              </>
+            )}
+          </button>
+        )}
+      </div>
+    </>
   )
 }
