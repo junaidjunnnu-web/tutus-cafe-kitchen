@@ -61,7 +61,7 @@ export default function Home() {
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
               <Moments />
             </div>
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 lg:flex lg:items-center lg:justify-center">
               <LocationDirections />
             </div>
           </div>

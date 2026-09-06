@@ -118,7 +118,7 @@ export default function Moments() {
   }
 
   return (
-    <>
+    <div className="w-full">
       <div className="text-center mb-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">Moments at Tutu's</h2>
         <p className="text-gray-600 text-sm">Shared by our guests</p>
@@ -303,6 +303,6 @@ export default function Moments() {
           </div>
         </div>
       )}
-    </>
+    </div>
   )
 }

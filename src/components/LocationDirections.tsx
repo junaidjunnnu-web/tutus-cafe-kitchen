@@ -36,7 +36,7 @@ export default function LocationDirections() {
   }
 
   return (
-    <>
+    <div className="w-full">
       <div className="text-center mb-6">
         <h3 className="text-xl font-bold text-gray-900 mb-2">Coming from somewhere else?</h3>
         <p className="text-gray-600 text-sm">Get directions straight to Tutu's Cafe and Kitchen from your current location.</p>
@@ -74,6 +74,6 @@ export default function LocationDirections() {
           </button>
         )}
       </div>
-    </>
+    </div>
   )
 }
