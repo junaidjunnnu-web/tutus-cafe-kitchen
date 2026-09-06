@@ -171,7 +171,7 @@ export default function Moments() {
             </button>
             <Link
               href="/moments"
-              className="inline-flex items-center space-x-2 bg-[#52525B] text-white px-5 py-2.5 rounded-lg hover:bg-[#18181B] transition-colors text-sm"
+              className="inline-flex items-center space-x-2 bg-white text-[#18181B] border-2 border-[#18181B] px-5 py-2.5 rounded-lg hover:bg-gray-50 transition-colors text-sm"
             >
               <Heart className="w-4 h-4" />
               <span>See All Photos</span>
